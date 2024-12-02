@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="login.aspx" method="post">
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>Enter User Name</td>
+                <td>
+                    <input type="text" id="username" value="" placeholder="Username" onblur="validateusername()">
+                    <span id="usernameerror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td>
+                    <input type="text" id="passsword" value="" placeholder="Password">
+                    <span id="password"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit"  value="Submit Details" >
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        //Data Validation
+
+        function validateusername(){
+            var userctrl1= document.getElementById('uername');
+            if(userctrl1.value == ""){
+                document.getElementById("usernameerror").innerHTML="Invalid User";
+                userctrl1.focus();
+            }
+        }
+    </script>
+</body>
+</html>

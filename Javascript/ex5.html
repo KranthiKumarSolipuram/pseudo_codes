@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Hoisting --> it moves all the declarations to the top within the scope
+        console.log(a)  //undefined 
+        var a=100;
+
+        function show(){
+            console.log(a) //undefined 
+            var a= 200;
+            //console.log(a)
+        }
+        show()
+        console.log(a) //100
+
+
+
+        //var      let     const
+        function display(){
+            if(true){
+                 x=100
+            }
+            console.log(x)
+        }
+        display()
+
+        var y=100;
+        var y=200; //will aloow duplicates unlike let
+
+        const MAXAGE=100
+        MAXAGE=30 // cannot modify
+    </script>
+</body>
+</html>

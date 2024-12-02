@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Customer(id,name,amount){
+            var custId=id;
+            var custName =name;
+            var custAmount=amount;
+
+            this.showData= function(){
+                console.log(custId,custName,custAmount);
+            }
+        }
+        let customer= new Customer(111,"kranthi",12345);
+        customer.showData();
+
+    </script>
+</body>
+</html>

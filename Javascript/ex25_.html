@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var firstname="Kranthi";
+        var lastname="Reddy";
+        function getFullName(){
+            console.log(this);
+            return `${this.firstname} ${this.lastname}`;
+        }
+        console.log(getFullName());
+
+        //what is the context of a function in javascript?
+        let empobj={
+            firstname:"kranthi",
+            lastname:"reddy"   
+        };
+
+        //call
+        getFullName.call(empobj);
+    </script>
+</body>
+</html>

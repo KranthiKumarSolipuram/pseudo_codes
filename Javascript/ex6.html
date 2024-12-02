@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //object creation using object literal
+
+        //JSON --> javascript object notation
+        let empObj ={
+            //properties
+            "firstname" : "kranthi", //json
+            firstname : "kranthi",
+            lastname : "reddy",
+
+
+            //functions
+            getfullname : function(){
+                return this.firstname+ " "+ this.lastname;
+            },
+
+
+            //nested objects
+            address :{
+                doornumber:100,
+                areaname:"goa",
+                cityname:"pune"
+            }
+        };
+        //if two variable are having same reference then the last values will be assigned
+        
+        console.log(empObj);
+
+        document.write("<h1>firstname :"+empObj.firstname);
+        document.write("<h1>lastname :"+empObj['lastname']);
+        document.write("<h1>fullname :"+empObj.getfullname());
+    
+        
+            
+        //object creation using object construtor
+        let custobj = new Object();
+        custobj.firstname= "kranthi"
+        custobj.lastname= "reddy"
+        custobj['mobile'] ="9876543210"
+
+        let propertyname = "age";
+        custobj[propertyname]=37
+        // custobj.age=4
+
+        console.log(custobj)
+
+        let keys=Object.keys(custobj);
+        console.log(keys); //['firstname', 'lastname', 'mobile', 'age']
+
+        let values=Object.values(custobj);
+        console.log(values);  //['kranthi', 'reddy', '9876543210', 37]
+
+        //forin 
+        for (const key in custobj) {
+            console.log(key,"-->",custobj[key])
+        }
+
+        //forof
+        for (const [key,value] of Object.entries(custobj)) {
+            console.log(key+"-",value);
+        }
+
+    </script>
+</body>
+</html>

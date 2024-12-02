@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES5 variable number of arguments
+        //evry function hace arguments array as parameter
+
+        function sum(){
+            console.log(Array.isArray(arguments));
+            let s=0;
+            for(let i=0;i<arguments.length;i++){
+            s=s+arguments[i];
+           }
+           console.log(s)
+        }
+        sum(20,30);
+        //ES6 --> Rest parameter
+        function sum1(...arguments){
+            console.log(Array.isArray(arguments));
+           let s=0;
+           for(let i=0;i<arguments.length;i++){
+            s=s+arguments[i];
+           }
+           console.log(s)
+        }
+        sum1(10,20);
+    </script>
+</body>
+</html>

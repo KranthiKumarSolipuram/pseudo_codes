@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // getters and setters
+        function Customer(){
+            var _custId;
+            this.custId = function(value){
+                if (value == undefined )
+                  return _custId;
+                else
+                  _custId = value;
+            }
+
+            var _custName;
+            this.custName=function(value){
+                if (value == undefined )
+                  return _custName;
+                else
+                  _custName = value;
+            }
+
+            var _custAmount;
+            this.custAmount = function(value){
+                if (value == undefined )
+                  return _custAmount;
+                else
+                  _custAmount = value;
+            }
+        }
+        let cust=new Customer();
+            cust.custId(100);
+            cust.custName("kanthi");
+            cust.custAmount(12340);
+
+            console.log(cust.custId(),cust.custName(),cust.custAmount());
+    </script>
+</body>
+</html>

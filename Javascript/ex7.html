@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const empobj = {
+        firstname: "kranthi",
+        lastname: "reddy",
+        getfullname: function () {
+          return this.firstname + " " + this.lastname;
+        },
+      };
+
+      //shallow copy
+      // let copiedobj=empobj;
+      // console.log(empobj); //kranthi
+      // console.log(copiedobj); //kranthi
+      // copiedobj.firstname="anil";
+      // console.log(empobj);
+      // console.log(copiedobj);
+
+      //Deep Copy
+      // let copiedobj=JSON.parse(JSON.stringify(empobj))
+      // console.log(empobj);
+      // console.log(copiedobj);
+
+      // copiedobj.firstname="prashanth"
+      // console.log(empobj);
+      // console.log(copiedobj);
+
+      let copiedobj = {
+        ...empobj,
+        address: { ...empobj.address}
+      };
+      console.log(empobj);
+      console.log(copiedobj);
+
+      copiedobj.firstname = "prashanth";
+      console.log(empobj);
+      console.log(copiedobj);
+
+      //spread operator
+      let a=[1,2,3,4,5,6]
+      console.log(...a)
+
+      //how many times each car available in the object
+      let str="ABC345ABC3456";
+      let tempobj={};
+      for(let i=0;i<str.length;i++){
+        if(tempobj[str[i]]){
+            tempobj[str[i]]++;
+        }else{
+            tempobj[str[i]]= 1;
+        }
+      }
+      console.log(tempobj);
+
+
+      const custobj={
+        firstname:"kranthi",
+        lastname:"reddy"
+      }
+      Object.freeze(custobj);//when freez cannot be able to modify
+      custobj.firstname="prashanth";
+      console.log(custobj);
+
+
+    </script>
+  </body>
+</html>

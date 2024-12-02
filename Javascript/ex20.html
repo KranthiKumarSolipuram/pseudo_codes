@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call back function asyncronous way
+        function fun1(){
+            setTimeout(() => {
+                console.log("fun1");
+            }, 500);
+        }
+        function fun2(){
+            console.log("fun2");
+        }
+        fun1()
+        fun2()
+    </script>
+</body>
+</html>

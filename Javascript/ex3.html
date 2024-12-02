@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // datatypes in javascript
+        // 1.primitive datatypes->stores the variable value
+        //    number,string,boolean,null,undefined,Symbol
+        // 2.reference types -> stores address of another memory allocation not the value
+        //    object,array
+
+        var a;
+
+        a=100 //number
+       console.log(typeof(a))
+
+       a=122.33
+       console.log(typeof(a)) //number
+
+       a="Kranthi"
+       console.log(typeof(a)) //string
+
+       a=true
+       console.log(typeof(a)) //boolean
+
+       a=null
+       console.log(typeof(a)) //object
+       
+       a=undefined
+       console.log(typeof(a)) //undefined
+
+       a={}
+       console.log(typeof(a))  //object
+
+       a=function(){};
+       console.log(typeof(a)) //function
+
+       a=[]
+       console.log(typeof(a)) //object
+
+       //== and ===
+       //== compare only value === compares value and type
+       if(10 == "10")
+       console.log("true")
+       else
+       console.log("false") //true
+
+       if(null == undefined)
+       console.log("true")
+       else
+       console.log("false") //true
+
+       var result=true
+       result=!result //if true then false 
+       console.log(result)
+
+    </script>
+</body>
+</html>

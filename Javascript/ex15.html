@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //clouser - converting a stateless function to a stateful fuction
+        function outterfunction(a){
+            // let a=100;
+            return function innerfunction(b){
+                // let b=200;
+                return a+b;
+            }
+        }
+        // let fun=outterfunction(100);
+        // console.log(fun(200));
+        console.log(outterfunction(100)(200)); //Function curring
+    </script>
+</body>
+</html>

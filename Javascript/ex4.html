@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //naming conventions
+        var camelCase;
+        //variables and function names --> camelCase
+        //class names  -->pascal case
+        //constants -->CAPITALLETTERS
+        //private variables --> custName
+
+        //function
+
+        //non- returnable function
+        function funName(){
+            console.log("Welcome!")
+        }
+        funName();
+
+        //returnable function
+        function sum(a,b){
+            return a+b;
+        }
+        console.log(sum(10,"20")); //1020
+
+        function sum(a,b){
+            return a-b;
+        }
+        console.log(sum(10,"20")); //-10
+
+        //function expression
+        var mul= function(a,b){
+            return a*b
+        }
+        console.log(mul(10,12));
+
+        //IIFE  --> immediately invokable function expression
+        (function () {
+            console.log("Hello!");
+        })(); //Hello!
+
+        //default parameters
+        function calculate(a,b=100){
+            return a*b;
+        }
+
+        console.log(calculate(10,20)) //200
+
+        //arrow functions
+        var mul= (a,b) => a*b
+        console.log(mul(10,12))
+
+        var mul1= a => a*100
+        console.log(mul1(10))
+
+        var mul2= ()=> 100 * 100
+        console.log(mul2())
+
+    </script>
+</body>
+</html>
